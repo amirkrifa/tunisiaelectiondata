@@ -1,0 +1,62 @@
+ 
+<div class="page-wrapper regular-page container" ng-if="dataset != null ">
+   <h2 class="section-title double-title">
+      <span>({{dataset.title}})</span>
+   </h2>
+   <div class="row">
+      <div class="col-md-12" >
+         <div class="panel">
+            <div class="panel-body">
+               <div class="col-md-8">
+                  <div class="description">{{dataset.description}}</div>
+               </div>
+               <div class="col-md-4">
+
+                   <br/>
+                   <div class="licence">
+                   <span>License(s):</span>
+                       <ul>
+                           <li ng-repeat=" license in dataset.licenses" class="resourcesList"> <a href="{{license.url}}" target="_blank">{{license.name}}</a></li>
+                       </ul>
+
+                   </div>
+                   <br/>
+                   <div class="git">
+                   <span>Repository:</span> <a href="{{dataset.git}}" >{{dataset.git}}</a><br/>
+                    <a href="{{dataset.git}}/issues/new" class="btn btn-danger issue" > Report an issue </a>
+                   </div>
+                   <br/>
+                  <div class="keywords">
+                     <ul>
+                        <li ng-repeat="keyword in dataset.keywords "><span class="label bg-red">{{keyword}}</span></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <h3 class="bordered ">Data files</h3>
+      <ul>
+         <li ng-repeat=" resource in dataset.resources" class="resourcesList">
+            <div class="row">
+               <div class="col-md-3">{{resource.name}}</div>
+               <div class="col-md-5">{{resource.title}}</div>
+               <div class="col-md-2">{{resource.format}}</div>
+               <div class="col-md-2"><a href="{{resource.download}}"> Download </a></div>
+               <div class="clearfix"></div>
+            </div>
+         </li>
+      </ul>
+   </div>
+   <div class="row">
+      <div class="viewer" style="height:auto;"></div>
+   </div>
+   <div class="row">
+      <div class="readme">
+         <h3 class="bordered">Read me </h3>
+         <div marked ng-include="readme"> </div>
+      </div>
+   </div>
+</div>

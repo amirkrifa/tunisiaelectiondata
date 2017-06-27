@@ -1,0 +1,29 @@
+<div class="row inner-partial bgblack">
+<div class="sidebar col-md-3 " style="right: 0px; left: 0px; display: block;">
+          <div class="inner-wrapper vcenter-wrapper">
+            <div class="side-content vcenter">
+              <div class="title">
+                <span class="second-part"></span>
+                <span>Community Visualisation</span>
+              </div>
+              <p>Produced by Mourakiboun </p>
+
+
+            </div>
+          </div>
+        </div>
+
+<div class="main-stories col-md-9">
+  <div class="img-list">
+
+              <div class="img-item story-hover-3"  ng-repeat="item in gitems" style="height: 250px;">
+                <a ng-click="openLightboxModal($index)">
+                  <img ng-src="{{item.url}}" alt="Image not found " class="img-responsive">
+                   <div class="story-overlay story-overlay-dark" style="padding-top: 20px; padding-left:10px;">
+                    <h3 class="title">{{item.caption}}</h3>
+                    <h4 class="subtitle">{{item.tags}} / {{item.theme}}</h4>
+                  </div>
+                 </a>
+              </div>
+            </div>
+</diV>
