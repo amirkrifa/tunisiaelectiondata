@@ -59,7 +59,7 @@ angular.module('ted.stories', ['ngRoute'])
        layer: districtLayer,
        propertyName: 'NAME_EN',
        circleLocation: true,
-       text:'...Chercher une Ville ou un Gouvernorat'
+       text:'...Chercher Ville ou Gouvernorat'
      });
       searchDistrict.addTo(map);
       searchDistrict.on('search_locationfound', function(e) {
@@ -87,7 +87,7 @@ angular.module('ted.stories', ['ngRoute'])
             collapsed: false,
             layer: geojsonLayer,
             propertyName: 'center_name',
-            text:'...Chercher un bureau de vote',
+            text:'...Chercher Bureau de Vote',
             circleLocation: true
           });
 
