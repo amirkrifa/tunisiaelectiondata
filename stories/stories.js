@@ -170,6 +170,7 @@ angular.module('ted.stories', ['ngRoute'])
                 plotBorderWidth: null,
                 plotShadow: false
               },
+              colors: ['#ED1C24','#0A4A9B', '#660066', '#00CC00', '#993333'],
               title: {
                 text: 'Candidates vote share'
               },
