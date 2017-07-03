@@ -16,7 +16,7 @@ config(['$routeProvider','$locationProvider','markedProvider',function($routePro
 
  // $locationProvider.html5Mode(true);
  // $locationProvider.hashPrefix = '!';
-    $routeProvider.otherwise({redirectTo: '/stories/par'});
+    $routeProvider.otherwise({redirectTo: '/stories/par/full'});
     markedProvider.setOptions({gfm: true});
 
 }]);
